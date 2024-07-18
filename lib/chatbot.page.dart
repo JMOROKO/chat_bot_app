@@ -107,9 +107,9 @@ class _ChatBotPageState extends State<ChatBotPage> {
                           Uri.https("api.openai.com", "/v1/chat/completions");
                       Map<String, String> httpHeaders = {
                         "Content-type": "application/json",
-                        "Authorization":
-                            "Bearer sk-proj-Uw65UguGZI1rn0XIrqXYT3BlbkFJKxdFREmU70cclxtJR0G8"
+                        "Authorization": "Bearer api_key"
                       };
+
                       var prompt = {
                         "model": "gpt-4o-mini",
                         "messages": [

@@ -12,15 +12,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      /*appBar: AppBar(
+      appBar: AppBar(
         title: Text(
-          "Login page",
+          "Login : admin | password : 1234",
           style: TextStyle(
             color: Theme.of(context).indicatorColor,
           ),
         ),
         backgroundColor: Theme.of(context).primaryColor,
-      ),*/
+      ),
       body: Center(
         child: Container(
           alignment: Alignment.center,
