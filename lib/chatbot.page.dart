@@ -122,7 +122,8 @@ class _ChatBotPageState extends State<ChatBotPage> {
                               headers: httpHeaders, body: json.encode(prompt))
                           .then((resp) {
                         var responseBody = resp.body;
-                        var llmResponse = json.decode(responseBody);
+                        var llmResponse =
+                            json.decode(utf8.decode(resp.bodyBytes));
                         String responseContente =
                             llmResponse["choices"][0]["message"]["content"];
 
@@ -136,7 +137,7 @@ class _ChatBotPageState extends State<ChatBotPage> {
                         queryController.text = "";
                         //permet de scroller vers le bas
                         scrollController.jumpTo(
-                            scrollController.position.maxScrollExtent + 200);
+                            scrollController.position.maxScrollExtent + 250);
                       }, onError: (err) {
                         print("+++++++++++++++++++++++++++++++++++");
                         print(err);
